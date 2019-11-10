@@ -29,7 +29,13 @@ export class EventEmitter {
     /**
      * Stores all the active events
      */
-    private _events: i_map<any> = {}
+    private _events: i_map<any> = {};
+
+    /**
+     * Number of listeners attached to each event
+     * TODO: implement maxListenerCount
+     */
+    //private _event_listener_count: i_map<number> = {};
 
     /**
      * Listens to the occurence of an event every time its emitted
@@ -37,7 +43,7 @@ export class EventEmitter {
      * @param event_name
      * @param callback
      */
-    on(event_name: string, callback: (transmission: any) => void): void {
+    public on(event_name: string, callback: (transmission: any) => void): void {
         this.onOnce(event_name, callback, false);
     }
 
@@ -47,7 +53,7 @@ export class EventEmitter {
      * @param event_name
      * @param callback
      */
-    once(event_name: string, callback: (transmission: any) => void): void {
+    public once(event_name: string, callback: (transmission: any) => void): void {
         this.onOnce(event_name, callback, true);
     }
 
@@ -78,7 +84,7 @@ export class EventEmitter {
      * @param event_name
      * @param transmission
      */
-    emit(event_name: string, transmission: any) {
+    public emit(event_name: string, transmission: any) {
         if (this._events.hasOwnProperty(event_name)) {
             this._events[event_name]
                 .forEach((set: any, index: number) => {
@@ -89,4 +95,22 @@ export class EventEmitter {
                 });
         }
     }
+
+    /**
+     * Sets the max number of listeners for an event
+     * 
+     * @param max_listener_count
+     */
+    public setMaxListeners(max_listener_count: number): this {
+
+        return this;
+    }
+
+    /**
+     * Return currently active event names
+     * */
+    public eventNames() {
+        return Object.keys(this._events);
+    }
+
 }

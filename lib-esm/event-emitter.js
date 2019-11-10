@@ -32,5 +32,11 @@ export class EventEmitter {
             });
         }
     }
+    setMaxListeners(max_listener_count) {
+        return this;
+    }
+    eventNames() {
+        return Object.keys(this._events);
+    }
 }
 //# sourceMappingURL=event-emitter.js.map
