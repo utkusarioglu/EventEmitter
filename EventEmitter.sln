@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "EventEmitter", "EventEmitter.njsproj", "{6C56D20C-0F6B-453F-A18D-B3EE163714EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C56D20C-0F6B-453F-A18D-B3EE163714EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C56D20C-0F6B-453F-A18D-B3EE163714EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C56D20C-0F6B-453F-A18D-B3EE163714EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C56D20C-0F6B-453F-A18D-B3EE163714EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81CA74AD-1F45-45ED-A242-14D5C6BD0862}
+	EndGlobalSection
+EndGlobal
