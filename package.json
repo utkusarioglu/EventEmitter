@@ -1,6 +1,6 @@
 {
   "name": "@utkusarioglu/event-emitter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "author": {
@@ -12,18 +12,20 @@
     "clean": "shx rm -rf _bundles lib lib-esm index.d.ts package-lock.json",
     "declaration": "dts-bundle --name @utkusarioglu/event-emitter --main lib/index.d.ts --out ../index.d.ts",
     "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack && npm run declaration",
-    "test": "jest"
+    "test": "jest",
+    "test-": "npm run build && jest",
+    "build-publish": "npm version patch --force && npm run build && npm publish"
   },
   "devDependencies": {
-    "@types/jest": "24.0.21",
-    "@types/node": "^8.0.14",
+    "@types/jest": "24.0.24",
+    "@types/node": "^12.12.21",
     "dts-bundle": "0.7.3",
     "jest": "24.9.0",
     "shx": "^0.3.2",
-    "ts-jest": "24.1.0",
+    "ts-jest": "24.2.0",
     "ts-loader": "6.2.1",
-    "typescript": "^3.6.4",
-    "webpack": "^4.41.2",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",
     "tsdoc": "^0.0.4"
   },
