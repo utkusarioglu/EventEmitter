@@ -5,7 +5,7 @@
  *
  * ///////////////////////////////////////////////////////////////////////// */
 
-import { i_map } from "./t_event-emitter";
+import { i_mapEventEmitter } from "./t_event-emitter";
 
 
 
@@ -29,7 +29,7 @@ export class EventEmitter {
     /**
      * Stores all the active events
      */
-    private _events: i_map<any> = {};
+    private _events: i_mapEventEmitter<any> = {};
 
     /**
      * Number of listeners attached to each event

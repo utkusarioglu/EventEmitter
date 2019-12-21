@@ -8,6 +8,6 @@
 /**
  * A generic map object
  * */
-export interface i_map<T> {
+export interface i_mapEventEmitter<T> {
     [key: string]: T
 }

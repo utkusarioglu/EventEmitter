@@ -35,6 +35,7 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="jest.config.js" />
+    <Content Include="LICENSE" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
